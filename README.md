@@ -7,3 +7,5 @@ The `borrow` function generates a stream from the borrower to the contract, whic
 In addition, if the user repays half of the loan, the `repay` function updates the stream downwards. Finally, if the user repays the entire loan, the payment stream is canceled.
 
 If the user attempts to cancel the stream by themselves, liquidations are also carried out. This involves seizing the NFT and transferring it to an NFTChest owned by the NFT Lending contract, which acts as a safe place.
+
+## Demo Video: https://clipchamp.com/watch/8aEzGCSBs1A
