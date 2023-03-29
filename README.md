@@ -1,6 +1,6 @@
 # Fixed-Interest NFT Lending
 
-This project demonstrates the use of Superfluid as a sublayer that powers financial applications. The protocol allows a user to deposit an NFT as collateral and borrow DAI against it.
+This project demonstrates the use of ***Superfluid*** as a sublayer that powers financial applications. The protocol allows a user to deposit an NFT as collateral and borrow DAI against it.
 
 The `borrow` function generates a stream from the borrower to the contract, which pays interest on the loan. The flow rate is determined based on the APR specified in the contract and the loan amount. For instance, if a user takes out a 100 DAI loan at an APR of 10%, a stream of 10 DAI/year is created from the borrower to the NFT Lending contract.
 
