@@ -5,6 +5,7 @@ import { EthHashInfo } from '@safe-global/safe-react-components'
 import { SafeAuthKit, SafeAuthProviderType, SafeAuthSignInData } from '@safe-global/auth-kit'
 
 import AppBar from './AppBar'
+import Homepage from "./Homepage"
 
 function App() {
   const [safeAuthSignInResponse, setSafeAuthSignInResponse] = useState<SafeAuthSignInData | null>(
@@ -55,41 +56,7 @@ function App() {
   return (
     <>
       <AppBar onLogin={login} onLogout={logout} isLoggedIn={!!provider} />
-      {safeAuthSignInResponse?.eoa && (
-        <Grid container>
-          <Grid item md={4} p={4}>
-            <Typography variant="h3" color="secondary" fontWeight={700}>
-              Owner account
-            </Typography>
-            <Divider sx={{ my: 3 }} />
-            <EthHashInfo
-              address={safeAuthSignInResponse.eoa}
-              showCopyButton
-              showPrefix
-              prefix={getPrefix(safeAuthSignInResponse.chainId)}
-            />
-          </Grid>
-          <Grid item md={8} p={4}>
-            <>
-              <Typography variant="h3" color="secondary" fontWeight={700}>
-                Available Safes
-              </Typography>
-              <Divider sx={{ my: 3 }} />
-              {safeAuthSignInResponse?.safes?.length ? (
-                safeAuthSignInResponse?.safes?.map((safe, index) => (
-                  <Box sx={{ my: 3 }} key={index}>
-                    <EthHashInfo address={safe} showCopyButton shortAddress={false} />
-                  </Box>
-                ))
-              ) : (
-                <Typography variant="body1" color="secondary" fontWeight={700}>
-                  No Available Safes
-                </Typography>
-              )}
-            </>
-          </Grid>
-        </Grid>
-      )}
+      <Homepage/>
     </>
   )
 }

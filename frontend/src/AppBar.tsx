@@ -15,7 +15,7 @@ const AppBar = ({ isLoggedIn, onLogin, onLogout }: AppBarProps) => {
   return (
     <StyledAppBar position="static" color="default">
       <Typography variant="h3" pl={4} fontWeight={700}>
-        Auth Provider Demo
+      Superfluid - NFT Lending
       </Typography>
 
       <Box mr={5}>
