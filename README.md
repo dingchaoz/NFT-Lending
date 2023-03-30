@@ -9,3 +9,7 @@ In addition, if the user repays half of the loan, the `repay` function updates t
 If the user attempts to cancel the stream by themselves, liquidations are also carried out. This involves seizing the NFT and transferring it to an NFTChest owned by the NFT Lending contract, which acts as a safe place.
 
 ## Demo Video: https://clipchamp.com/watch/8aEzGCSBs1A
+
+![image](https://user-images.githubusercontent.com/61940373/228928716-61e60041-5816-4db2-b6da-c4b07ad6bde5.png)
+![image](https://user-images.githubusercontent.com/61940373/228928794-62317711-1ad7-4cfe-85b1-455ed0d92a05.png)
+
